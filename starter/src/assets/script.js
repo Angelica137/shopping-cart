@@ -22,23 +22,15 @@ class Product {
 }
 
 // I used object lterals because that was the instruction
-const cherry = new Product(1, "Carton of Cherries", 0, 4, "images/cherry.jpg");
-
-const orange = {
-  productId: "2",
-  name: "Bag of Oranges",
-  price: 10,
-  qty: 0,
-  image: "images/orange.jpg",
-};
-
-const strawberry = {
-  productId: "3",
-  name: "Carton of Strawberry",
-  price: 0,
-  qty: 0,
-  image: "images/strawberry.jpg",
-};
+const cherry = new Product(1, "Carton of Cherries", 4, 0, "images/cherry.jpg");
+const orange = new Product(2, "Bag of Oranges", 10, 0, "images/orange.jpg");
+const strawberry = new Product(
+  3,
+  "Carton of Strawberries",
+  0,
+  0,
+  "images/strawberry.jpg"
+);
 
 //I had to move this because I was having hoisting issues
 
