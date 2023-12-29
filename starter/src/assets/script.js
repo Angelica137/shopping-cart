@@ -21,32 +21,32 @@ class Product {
 }
 
 const cherry = {
-  //productId: "1",
-  name: "Cherry",
+  productId: "1",
+  name: "Carton of Cherries",
   price: 0,
   qty: 0,
-  image: "starter/src/images/cherry.jpg",
+  image: "images/cherry.jpg",
 };
 
 const orange = {
-  //productId: "2",
-  name: "Cherry",
+  productId: "2",
+  name: "Orange",
   price: 0,
   qty: 0,
-  image: "starter/src/images/cherry.jpg",
+  image: "images/orange.jpg",
 };
 
 const strawberry = {
-  //productId: "3",
-  name: "Cherry",
+  productId: "3",
+  name: "Carton of Strawberry",
   price: 0,
   qty: 0,
-  image: "starter/src/images/cherry.jpg",
+  image: "images/strawberry.jpg",
 };
 
 //I had to move this because I was having hoisting issues
 
-let products = [cherry, cherry, cherry];
+let products = [cherry, orange, strawberry];
 
 //const orange = new Product(2, "Orange", 3, 4);
 //const strawberry = new Product(3, "Strawberry", 3);
