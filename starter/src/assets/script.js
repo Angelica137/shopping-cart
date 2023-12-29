@@ -10,7 +10,7 @@ literals that you create in the next step. */
    - image: picture of product (url string)
 */
 
-//I created a class to not repeat over and over
+//👉 I created a class to not repeat over and over
 class Product {
   constructor(productId, name, price, qty, image) {
     this.productId = productId;
@@ -21,7 +21,7 @@ class Product {
   }
 }
 
-// I used object lterals because that was the instruction
+//👉  I used object lterals because that was the instruction
 const cherry = new Product(1, "Carton of Cherries", 4, 0, "images/cherry.jpg");
 const orange = new Product(2, "Bag of Oranges", 10, 0, "images/orange.jpg");
 const strawberry = new Product(
@@ -32,12 +32,10 @@ const strawberry = new Product(
   "images/strawberry.jpg"
 );
 
-//I had to move this because I was having hoisting issues
+//👉  I had to move this because I was having hoisting issues
 
 let products = [cherry, orange, strawberry];
 
-//const orange = new Product(2, "Orange", 3, 4);
-//const strawberry = new Product(3, "Strawberry", 3);
 /* Images provided in /images folder. All images from Unsplash.com
    - cherry.jpg by Mae Mu
    - orange.jpg by Mae Mu
