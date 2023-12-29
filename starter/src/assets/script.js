@@ -10,6 +10,7 @@ literals that you create in the next step. */
    - image: picture of product (url string)
 */
 
+//I created a class to not repeat over and over
 class Product {
   constructor(productId, name, price, qty, image) {
     this.productId = productId;
@@ -20,18 +21,13 @@ class Product {
   }
 }
 
-const cherry = {
-  productId: "1",
-  name: "Carton of Cherries",
-  price: 0,
-  qty: 0,
-  image: "images/cherry.jpg",
-};
+// I used object lterals because that was the instruction
+const cherry = new Product(1, "Carton of Cherries", 0, 4, "images/cherry.jpg");
 
 const orange = {
   productId: "2",
-  name: "Orange",
-  price: 0,
+  name: "Bag of Oranges",
+  price: 10,
   qty: 0,
   image: "images/orange.jpg",
 };
