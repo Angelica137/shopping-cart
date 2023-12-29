@@ -12,11 +12,11 @@ literals that you create in the next step. */
 
 //👉 I created a class to not repeat over and over
 class Product {
-  constructor(productId, name, price, qty, image) {
+  constructor(productId, name, price, quantity, image) {
     this.productId = productId;
     this.name = name;
     this.price = price;
-    this.qty = qty;
+    this.quantity = quantity;
     this.image = image;
   }
 }
@@ -27,7 +27,7 @@ const orange = new Product(2, "Bag of Oranges", 10, 0, "images/orange.jpg");
 const strawberry = new Product(
   3,
   "Carton of Strawberries",
-  0,
+  10,
   0,
   "images/strawberry.jpg"
 );
@@ -44,13 +44,31 @@ let products = [cherry, orange, strawberry];
 
 /* Declare an empty array named cart to hold the items in the cart */
 
-let cart = [1, 2, 3];
+let cart = [strawberry];
 
 /* Create a function named addProductToCart that takes in the product productId as an argument
   - addProductToCart should get the correct product based on the productId
   - addProductToCart should then increase the product's quantity
   - if the product is not already in the cart, add it to the cart
 */
+
+function addProductToCart(productId) {
+  //create a variable to look for the product in the cart array and stores its location
+  const existingProductIndex = cart.findIndex(
+    (item) => item.productId === productId
+  );
+  //if the product exists, we access the index directly and increase its quantity
+  if (existingProductIndex !== -1) {
+    cart[existingProductIndex].quantity += 1;
+  } else {
+    //else, we look for the product in the the product array. If it exists it is pushed into the cart array
+    const product = products.find((item) => item.productId === productId);
+    if (product) {
+      cart.push({ ...product, quantity: 1 });
+    }
+  }
+  return cart;
+}
 
 /* Create a function named increaseQuantity that takes in the productId as an argument
   - increaseQuantity should get the correct product based on the productId
