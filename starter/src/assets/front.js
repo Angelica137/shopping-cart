@@ -63,7 +63,8 @@ drawCart();
 drawCheckout();
 
 document.querySelector(".products").addEventListener("click", (e) => {
-  let productId = e.target.parentNode.getAttribute("data-productId");
+  alert("Event listener triggred!");
+  let productId = parseInt(e.target.parentNode.getAttribute("data-productId"));
   productId *= 1;
   addProductToCart(productId);
   drawCart();

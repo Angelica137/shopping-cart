@@ -44,7 +44,7 @@ let products = [cherry, orange, strawberry];
 
 /* Declare an empty array named cart to hold the items in the cart */
 
-let cart = [strawberry];
+let cart = [];
 
 /* Create a function named addProductToCart that takes in the product productId as an argument
   - addProductToCart should get the correct product based on the productId
@@ -53,7 +53,7 @@ let cart = [strawberry];
 */
 
 function addProductToCart(productId) {
-  //create a variable to look for the product in the cart array and stores its location
+  //create a variable to look for the product in the cart array and store its location
   const existingProductIndex = cart.findIndex(
     (item) => item.productId === productId
   );
